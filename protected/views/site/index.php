@@ -58,65 +58,6 @@ $this->pageTitle = Yii::app()->name . ' - Selamat Datang';
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-content">
-            <h2 class="section-title">Tentang Kami</h2>
-            <p>Inova Medika Solusi merupakan sistem informasi manajemen kesehatan yang dirancang untuk membantu rumah sakit, klinik, dan praktik dokter dalam mengelola operasional sehari-hari dengan lebih efisien dan efektif.</p>
-            <p>Dengan pengalaman lebih dari 5 tahun dalam industri kesehatan, kami memahami kebutuhan tenaga medis dan administrasi untuk menyediakan layanan terbaik kepada pasien.</p>
-            <a href="#" class="btn btn-outline">Selengkapnya</a>
-        </div>
-        <div class="about-image">
-            <!-- Placeholder for about image -->
-            <div class="image-placeholder secondary">
-                <i class="icon-hospital"></i>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials-section">
-        <h2 class="section-title">Testimoni Pengguna</h2>
-        <div class="testimonials-slider">
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>"Sistem ini sangat membantu kami dalam mengelola jadwal dokter dan reservasi pasien. Sangat direkomendasikan!"</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        <!-- Placeholder for avatar -->
-                        <div class="avatar-placeholder">D</div>
-                    </div>
-                    <div class="author-details">
-                        <h4>Dr. Dewi Sartika</h4>
-                        <p>RS Medika Utama</p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>"Fitur rekam medis elektronik membuat pekerjaan kami jauh lebih mudah dan efisien. Data pasien tersimpan dengan aman."</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-avatar">
-                        <!-- Placeholder for avatar -->
-                        <div class="avatar-placeholder">B</div>
-                    </div>
-                    <div class="author-details">
-                        <h4>Budi Santoso</h4>
-                        <p>Klinik Sehat Sentosa</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <h2>Siap Mengoptimalkan Layanan Kesehatan Anda?</h2>
-        <p>Jadilah bagian dari transformasi digital di bidang kesehatan dengan Inova Medika Solusi</p>
-        <a href="<?php echo Yii::app()->createUrl('site/contact'); ?>" class="btn btn-primary btn-large">Hubungi Kami</a>
-    </section>
 </div>
 
 <style>

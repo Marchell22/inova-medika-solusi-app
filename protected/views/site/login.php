@@ -1,3 +1,8 @@
+<?php
+/* @var $this SiteController */
+
+$this->pageTitle = Yii::app()->name . ' - Login';
+?>
 <div class="login-container">
     <div class="login-box">
         <h2>Login Sistem</h2>
