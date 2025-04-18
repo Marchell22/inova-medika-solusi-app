@@ -226,3 +226,199 @@ Stack trace:
 #11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\yiic.php(7): require_once('C:\\Users\\Marche...')
 #12 {main}
 ---
+2025/04/16 12:45:37 [error] [exception.ParseError] ParseError: syntax error, unexpected token "<", expecting end of file in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\RoleController.php:4
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(276): CWebApplication->createController('')
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('role')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php(13): CApplication->run()
+#4 {main}
+REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role
+HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=dashboard/index
+---
+2025/04/16 12:45:56 [error] [exception.CException] CException: RoleController cannot find the requested view "create". in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php:881
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\RoleController.php(65): CController->render('create', Array)
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\actions\CInlineAction.php(49): RoleController->actionCreate()
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#12 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('role/create')
+#13 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role/create
+HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role
+---
+2025/04/16 12:46:54 [error] [exception.CException] CException: RoleController cannot find the requested view "_form". in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php:881
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\views\role\create.php(9): CController->renderPartial('_form', Array)
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CBaseController.php(126): require('C:\\Users\\Marche...')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Users\\Marche...', Array, true)
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\Users\\Marche...', Array, true)
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(785): CController->renderPartial('create', Array, true)
+#5 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\RoleController.php(65): CController->render('create', Array)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\actions\CInlineAction.php(49): RoleController->actionCreate()
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('role/create')
+#17 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role/create
+HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role
+---
+2025/04/16 12:48:35 [error] [exception.CException] CException: The "dataProvider" property cannot be empty. in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\zii\widgets\CBaseListView.php:123
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\zii\widgets\grid\CGridView.php(355): CBaseListView->init()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CBaseController.php(147): CGridView->init()
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CBaseController.php(181): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\views\role\index.php(23): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CBaseController.php(126): require('C:\\Users\\Marche...')
+#5 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\Users\\Marche...', Array, true)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(872): CBaseController->renderFile('C:\\Users\\Marche...', Array, true)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(785): CController->renderPartial('index', Array, true)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\RoleController.php(43): CController->render('index', Array)
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\actions\CInlineAction.php(49): RoleController->actionIndex()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#14 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(282): CController->run('index')
+#19 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('role/index')
+#20 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#21 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role/index
+HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role/create
+---
+2025/04/16 12:53:54 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "created_at" of relation "role" violates not-null constraint
+DETAIL:  Failing row contains (3, Dokter, null, null).. The SQL statement executed was: INSERT INTO "role" ("name") VALUES (:yp0). Bound with :yp0='Dokter'.
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\RoleController.php (58)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/16 12:53:54 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23502]: Not null violation: 7 ERROR:  null value in column "created_at" of relation "role" violates not-null constraint
+DETAIL:  Failing row contains (3, Dokter, null, null).. The SQL statement executed was: INSERT INTO "role" ("name") VALUES (:yp0). Bound with :yp0='Dokter' in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\ar\CActiveRecord.php(1083): CDbCommand->execute()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->insert(NULL)
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\RoleController.php(58): CActiveRecord->save()
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\actions\CInlineAction.php(49): RoleController->actionCreate()
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('role/create')
+#14 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role/create
+HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=role/create
+---
+2025/04/16 12:57:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "roles" does not exist. The SQL statement executed was: ALTER TABLE "users" ADD CONSTRAINT "fk_users_role" FOREIGN KEY ("role_id") REFERENCES "roles" ("id") ON DELETE SET NULL ON UPDATE CASCADE.
+2025/04/16 12:57:35 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42P01]: Undefined table: 7 ERROR:  relation "roles" does not exist. The SQL statement executed was: ALTER TABLE "users" ADD CONSTRAINT "fk_users_role" FOREIGN KEY ("role_id") REFERENCES "roles" ("id") ON DELETE SET NULL ON UPDATE CASCADE in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php(1463): CDbCommand->execute()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbMigration.php(366): CDbCommand->addForeignKey('fk_users_role', 'users', 'role_id', 'roles', 'id', 'SET NULL', 'CASCADE')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\migrations\m250416_105654_add_role_to_users_database.php(10): CDbMigration->addForeignKey('fk_users_role', 'users', 'role_id', 'roles', 'id', 'SET NULL', 'CASCADE')
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(415): m250416_105654_add_role_to_users_database->up()
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m250416_105654_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\yiic.php(7): require_once('C:\\Users\\Marche...')
+#12 {main}
+---
+2025/04/16 12:58:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer.
+2025/04/16 12:58:36 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('users', 'role_id', 'integer')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\migrations\m250416_105654_add_role_to_users_database.php(7): CDbMigration->addColumn('users', 'role_id', 'integer')
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(415): m250416_105654_add_role_to_users_database->up()
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m250416_105654_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\yiic.php(7): require_once('C:\\Users\\Marche...')
+#12 {main}
+---
+2025/04/16 12:59:30 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer.
+2025/04/16 12:59:30 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('users', 'role_id', 'integer')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\migrations\m250416_105654_add_role_to_users_database.php(7): CDbMigration->addColumn('users', 'role_id', 'integer')
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(415): m250416_105654_add_role_to_users_database->up()
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m250416_105654_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\yiic.php(7): require_once('C:\\Users\\Marche...')
+#12 {main}
+---
+2025/04/16 13:00:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer.
+2025/04/16 13:00:10 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('users', 'role_id', 'integer')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\migrations\m250416_105654_add_role_to_users_database.php(7): CDbMigration->addColumn('users', 'role_id', 'integer')
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(415): m250416_105654_add_role_to_users_database->up()
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m250416_105654_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\yiic.php(7): require_once('C:\\Users\\Marche...')
+#12 {main}
+---
+2025/04/16 13:00:34 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer.
+2025/04/16 13:00:34 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42701]: Duplicate column: 7 ERROR:  column "role_id" of relation "users" already exists. The SQL statement executed was: ALTER TABLE "users" ADD COLUMN "role_id" integer in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbCommand.php(1405): CDbCommand->execute()
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\db\CDbMigration.php(303): CDbCommand->addColumn('users', 'role_id', 'integer')
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\migrations\m250416_105654_add_role_to_users_database.php(7): CDbMigration->addColumn('users', 'role_id', 'integer')
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(415): m250416_105654_add_role_to_users_database->up()
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m250416_105654_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommand.php(177): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleCommandRunner.php(71): CConsoleCommand->run(Array)
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\console\CConsoleApplication.php(92): CConsoleCommandRunner->run(Array)
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CConsoleApplication->processRequest()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\yiic.php(33): CApplication->run()
+#11 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\yiic.php(7): require_once('C:\\Users\\Marche...')
+#12 {main}
+---
