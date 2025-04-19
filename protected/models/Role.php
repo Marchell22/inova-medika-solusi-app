@@ -68,6 +68,12 @@ class Role extends CActiveRecord
     {
         return parent::model($className);
     }
+    public function relations()
+    {
+        return array(
+            'users' => array(self::HAS_MANY, 'User', 'role_id'),
+        );
+    }
     protected function beforeSave()
     {
         if(parent::beforeSave())

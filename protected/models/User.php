@@ -6,110 +6,129 @@
  * @property integer $id
  * @property string $username
  * @property string $password
+ * @property int $role_id
  * @property string $created_at
  * @property string $updated_at
  */
 class User extends CActiveRecord
 {
-    /**
-     * @return string nama tabel di database
-     */
+    public $password_repeat;
+
+    public static function model($className = __CLASS__)
+    {
+        return parent::model($className);
+    }
+
     public function tableName()
     {
         return 'users';
     }
 
-    /**
-     * @return array validasi untuk atribut
-     */
     public function rules()
     {
         return array(
+            // Username dan password wajib diisi
             array('username, password', 'required'),
+            // Validasi role_id
+            array('role_id', 'required'),
+            array('role_id', 'numerical', 'integerOnly' => true),
+            array('role_id', 'exist', 'attributeName' => 'id', 'className' => 'Role'),
+            // Username harus unik
             array('username', 'unique'),
-            array('username, password', 'length', 'max'=>255),
-            array('created_at, updated_at', 'safe'),
+            // Password confirmation
+            array('password_repeat', 'safe'),
+            array('password', 'compare', 'compareAttribute' => 'password_repeat', 'on' => 'create'),
+
+            // Max length validations
+            array('username, password', 'length', 'max' => 255),
+            // Pencarian
+            array('id, username, password, created_at, updated_at, role_id', 'safe', 'on' => 'search'),
         );
     }
 
-    /**
-     * @return array relasi dengan model lain
-     */
     public function relations()
     {
         return array(
-            // Definisikan relasi dengan model lain jika diperlukan
+            'role' => array(self::BELONGS_TO, 'Role', 'role_id'),
         );
     }
 
-    /**
-     * @return array kustomisasi label atribut
-     */
     public function attributeLabels()
     {
         return array(
             'id' => 'ID',
             'username' => 'Username',
             'password' => 'Password',
+            'password_repeat' => 'Konfirmasi Password',
             'created_at' => 'Tanggal Dibuat',
-            'updated_at' => 'Tanggal Diperbarui',
+            'updated_at' => 'Terakhir Diperbarui',
+            'role_id' => 'Role',
         );
     }
 
-    /**
-     * Returns the static model of the specified AR class.
-     * @param string $className active record class name.
-     * @return User the static model class
-     */
-    public static function model($className=__CLASS__)
-    {
-        return parent::model($className);
-    }
-    
-    /**
-     * Sebelum menyimpan model, hash password jika diubah dan atur timestamp
-     */
     protected function beforeSave()
     {
-        if(parent::beforeSave())
-        {
-            if($this->isNewRecord)
-            {
+        if (parent::beforeSave()) {
+            if ($this->isNewRecord) {
                 $this->created_at = new CDbExpression('NOW()');
-                // Hash password hanya jika baru
-                $this->password = $this->hashPassword($this->password);
+            } else {
+                $this->updated_at = new CDbExpression('NOW()');
             }
-            else if($this->password != $this->oldAttributes['password'])
-            {
-                // Hash password jika diubah
-                $this->password = $this->hashPassword($this->password);
+
+            if (!empty($this->password)) {
+                // Cek apakah password sudah dalam bentuk hash
+                $passwordLength = strlen($this->password);
+                $isMd5 = ($passwordLength === 32 && ctype_xdigit($this->password));
+                
+                // Jika bukan dalam bentuk hash, maka hash password
+                if (!$isMd5) {
+                    $this->password = $this->hashPassword($this->password);
+                }
+            } else if (!$this->isNewRecord) {
+                // Jika update dan password kosong, ambil password lama
+                $oldUser = self::model()->findByPk($this->id);
+                if ($oldUser) {
+                    $this->password = $oldUser->password;
+                }
             }
-            
-            $this->updated_at = new CDbExpression('NOW()');
+
             return true;
         }
         return false;
     }
-    
-    /**
-     * Hash password
-     * @param string $password
-     * @return string hashed password
-     */
+    public function search()
+    {
+        $criteria = new CDbCriteria;
+
+        $criteria->compare('id', $this->id);
+        $criteria->compare('username', $this->username, true);
+        $criteria->compare('role_id', $this->role_id);
+        // $criteria->compare('created_at', $this->created_at, true);
+        // $criteria->compare('updated_at', $this->updated_at, true);
+
+        return new CActiveDataProvider($this, array(
+            'criteria' => $criteria,
+            'sort' => array(
+                'defaultOrder' => 'id DESC',
+            ),
+            'pagination' => array(
+                'pageSize' => 20,
+            ),
+        ));
+    }
+
     public function hashPassword($password)
     {
-        // Untuk migrasi yang ada, kita gunakan md5
-        // Untuk keamanan lebih baik, gunakan password_hash() di PHP modern
-        return md5($password);
+        return md5($password); // Sebaiknya gunakan algoritma hashing yang lebih aman seperti password_hash
     }
-    
-    /**
-     * Verifikasi password
-     * @param string $password
-     * @return boolean
-     */
+
     public function validatePassword($password)
     {
         return $this->password === $this->hashPassword($password);
+    }
+
+    public function getRoleName()
+    {
+        return $this->role ? $this->role->name : 'Tidak Diketahui';
     }
 }
