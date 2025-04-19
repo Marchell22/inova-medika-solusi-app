@@ -40,6 +40,9 @@
 					array('label' => 'Akun Pengguna', 'url' => array('/user'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 1),
 					array('label' => 'Wilayah', 'url' => array('/wilayah'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 1),
 					array('label' => 'Pegawai', 'url' => array('/pegawai'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 1),
+					array('label' => 'Tindakan', 'url' => array('/tindakan'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 1),
+					array('label' => 'Obat', 'url' => array('/obat'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 1),
+					array('label' => 'Pendaftaran Pasien', 'url' => array('/pendaftaranPasien'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 3),
 					array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
 				),
 			)); ?>
