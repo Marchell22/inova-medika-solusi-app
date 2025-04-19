@@ -574,3 +574,74 @@ Stack trace:
 REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=user/update&id=2
 HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=user/update&id=2
 ---
+2025/04/19 10:18:09 [error] [exception.CHttpException.403] CHttpException: You are not authorized to perform this action. in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\auth\CAccessControlFilter.php:183
+Stack trace:
+#0 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#3 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(282): CController->run('')
+#8 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#9 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/inova-medika-solusi/inova-medika-solusi-app/index.php?r=user
+HTTP_REFERER=http://localhost:8080/inova-medika-solusi/inova-medika-solusi-app/index.php?r=dashboard/index
+---
+2025/04/19 11:38:38 [error] [application] Duplicate NIP detected: 012e2
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:38:53 [error] [application] Duplicate NIP detected on update: PGW-002
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (124)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:38:53 [error] [application] Duplicate NIP detected on update: PGW-002
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (124)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:39:06 [error] [application] Error saving model: array (
+  'nama' => 
+  array (
+    0 => 'Nama Lengkap cannot be blank.',
+  ),
+)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (66)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:39:15 [error] [application] Duplicate NIP detected: PGW-004
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:39:15 [error] [application] Duplicate NIP detected: PGW-004
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:39:40 [error] [application] Error saving model: array (
+  'nama' => 
+  array (
+    0 => 'Nama Lengkap cannot be blank.',
+  ),
+)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (66)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:39:44 [error] [application] Duplicate NIP detected: PGW-005
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:39:51 [error] [application] Duplicate NIP detected: PGW-006
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:40:11 [error] [application] Error saving model: array (
+  'nama' => 
+  array (
+    0 => 'Nama Lengkap cannot be blank.',
+  ),
+)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (66)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:40:17 [error] [application] Duplicate NIP detected: PGW-005
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:40:19 [error] [application] Duplicate NIP detected: PGW-005
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)
+2025/04/19 11:40:20 [error] [application] Duplicate NIP detected: PGW-005
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\protected\controllers\PegawaiController.php (59)
+in C:\Users\Marchell Manurung\xampp\htdocs\inova-medika-solusi\inova-medika-solusi-app\index.php (13)

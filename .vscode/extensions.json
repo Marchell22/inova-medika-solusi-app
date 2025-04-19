@@ -1,3 +1,6 @@
 {
-    "recommendations": []
+    "recommendations": [
+        "bmewburn.vscode-intelephense-client",
+        "neilbrayfield.php-docblocker"
+    ]
 }
