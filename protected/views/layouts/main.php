@@ -44,6 +44,7 @@
 					array('label' => 'Obat', 'url' => array('/obat'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 1),
 					array('label' => 'Pendaftaran Pasien', 'url' => array('/pendaftaranPasien'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 3),
 					array('label' => 'Transaksi', 'url' => array('/tindakanResep'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 4),
+					array('label'=> 'Pembayaran', 'url' => array('/pembayaran'), 'visible' => !Yii::app()->user->isGuest && User::model()->findByPk(Yii::app()->user->id)->role_id == 5),
 					array('label' => 'Logout (' . Yii::app()->user->name . ')', 'url' => array('/site/logout'), 'visible' => !Yii::app()->user->isGuest)
 				),
 			)); ?>

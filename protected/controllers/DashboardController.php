@@ -27,61 +27,28 @@ class DashboardController extends Controller
         $summaryData = array(
             array(
                 'title' => 'Total Pasien',
-                'value' => '1,250',
+                'value' => PendaftaranPasien::model()->count(),
                 'icon' => 'user',
                 'color' => 'primary'
             ),
             array(
-                'title' => 'Kunjungan Hari Ini',
-                'value' => '28',
-                'icon' => 'calendar',
-                'color' => 'success'
-            ),
-            array(
-                'title' => 'Dokter Aktif',
-                'value' => '8',
+                'title' => 'Total Pegawai',
+                'value' => Pegawai::model()->count(),
                 'icon' => 'user-md',
                 'color' => 'info'
             ),
             array(
                 'title' => 'Obat Tersedia',
-                'value' => '124',
+                'value' => Obat::model()->count(),
                 'icon' => 'medkit',
                 'color' => 'warning'
             ),
         );
 
-        // Data untuk aktivitas terbaru
-        $recentActivities = array(
-            array(
-                'type' => 'registration',
-                'description' => 'Pasien baru terdaftar',
-                'name' => 'Budi Santoso',
-                'time' => '5 menit yang lalu',
-            ),
-            array(
-                'type' => 'appointment',
-                'description' => 'Janji temu dengan dokter',
-                'name' => 'Dr. Siti Aminah',
-                'time' => '30 menit yang lalu',
-            ),
-            array(
-                'type' => 'payment',
-                'description' => 'Pembayaran diterima',
-                'name' => 'Rp 500.000',
-                'time' => '1 jam yang lalu',
-            ),
-            array(
-                'type' => 'medicine',
-                'description' => 'Obat diserahkan kepada pasien',
-                'name' => 'Ani Wijaya',
-                'time' => '3 jam yang lalu',
-            ),
-        );
+
 
         $this->render('index', array(
             'summaryData' => $summaryData,
-            'recentActivities' => $recentActivities,
         ));
     }
 }
